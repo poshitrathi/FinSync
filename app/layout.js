@@ -8,8 +8,8 @@ import ErrorBoundary from "@/components/error-boundary";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Welth",
-  description: "One stop Finance Platform",
+  title: "FinSync",
+  description: "FinSync - Smart Finance Platform",
 };
 
 export default function RootLayout({ children }) {
