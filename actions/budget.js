@@ -59,7 +59,10 @@ export async function getCurrentBudget(accountId) {
     };
   } catch (error) {
     console.error("Error fetching budget:", error);
-    throw error;
+    return {
+      budget: null,
+      currentExpenses: 0,
+    };
   }
 }
 
