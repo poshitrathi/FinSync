@@ -1,13 +1,35 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: [
-      'randomuser.me',
-      'https://zdswivpqybrgbbnziwmu.supabase.co', // replace with your real Supabase domain
-      'cdn.jsdelivr.net',              // example: if using jsDelivr
-      'vercel.app',                    // if loading images from deployed assets
-      'avatars.githubusercontent.com'  // if loading from GitHub
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'randomuser.me',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.supabase.co',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.jsdelivr.net',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.vercel.app',
+      },
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'img.clerk.com',
+      }
     ],
+  },
+  experimental: {
+    serverComponentsExternalPackages: ['@prisma/client'],
   },
 };
 
