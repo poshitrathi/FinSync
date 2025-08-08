@@ -18,8 +18,7 @@ export default function RootLayout({ children }) {
         <head>
           <link rel="icon" href="/logo-sm.png" sizes="any" />
         </head>
-        <body className={`${inter.className}`}>
-          <ErrorBoundary>
+        <body className={`${inter.className}`}
             <Header />
             <main className="min-h-screen">{children}</main>
             <Toaster richColors />
@@ -29,7 +28,6 @@ export default function RootLayout({ children }) {
                 <p>Made with 💗 by Poshit</p>
               </div>
             </footer>
-          </ErrorBoundary>
         </body>
       </html>
     </ClerkProvider>
