@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header";
+import Header from "@/components/header"; // Ensure this path is correct if 'header' is lowercase
 import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "sonner";
 
@@ -18,7 +18,8 @@ export default function RootLayout({ children }) {
         <head>
           <link rel="icon" href="/logo-sm.png" sizes="any" />
         </head>
-        <body className={`${inter.className}`}>
+        {/* Corrected className syntax on the body tag */}
+        <body className={inter.className}>
           <Header />
           <main className="min-h-screen">{children}</main>
           <Toaster richColors />
