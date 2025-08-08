@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "sonner";
-import ErrorBoundary from "@/components/error-boundary";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +20,6 @@ export default function RootLayout({ children }) {
           <link rel="icon" href="/logo-sm.png" sizes="any" />
         </head>
         <body className={`${inter.className}`}>
-          <ErrorBoundary>
             <Header />
             <main className="min-h-screen">{children}</main>
             <Toaster richColors />
@@ -30,7 +29,6 @@ export default function RootLayout({ children }) {
                 <p>Made with 💗 by Poshit</p>
               </div>
             </footer>
-          </ErrorBoundary>
         </body>
       </html>
     </ClerkProvider>
